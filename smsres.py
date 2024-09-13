@@ -50,7 +50,7 @@ class ParseSMS():
             time.sleep(50)
             return (res,self.toggle,self.poolsend)
 
-        if self.checkip(res['headers']['Cf-Connecting-Ip'],self.allowed_ip) is None:
+        if self.checkip(res['headers']['Cf-Connecting-Ip'],self.allowed_ip) is False:
             self.sendemail(
                 f"ERROR@{self.maildomain}",
                 "IP ERROR",
