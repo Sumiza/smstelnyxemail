@@ -1,0 +1,15 @@
+services:
+  python-git:
+    
+    image: sumizadocker/python-git:latest
+    
+    environment:
+      USER: sumiza
+      REPO: smstelnyxemail
+      PIP_INSTALL: 'urlrequest'
+      MAIL_API_KEY:
+      WEBHOOKBIN:
+      MAIL_DOMAIN:
+      ALLOWED_IPS: '192.76.120.0/24'
+
+    command: "python smsres.py"
